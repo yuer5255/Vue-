@@ -1,10 +1,8 @@
 # Table of contents
 
-* [浏览器HTTP缓存](README.md)
-
 ## 目录
 
-* [浏览器HTTP缓存](mu-lu/liu-lan-qi-http-huan-cun.md)
+* [浏览器HTTP缓存](README.md)
 * [流程](mu-lu/liu-cheng.md)
 * [强制缓存](mu-lu/qiang-zhi-huan-cun.md)
 * [Expires](mu-lu/expires.md)
