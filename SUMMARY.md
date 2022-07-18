@@ -1,29 +1,17 @@
 # Table of contents
 
-* [强制缓存和协商缓存](README.md)
+* [浏览器HTTP缓存](README.md)
 
-## Guides
+## 目录
 
-* [Creating your first project](guides/creating-your-first-project.md)
-* [Creating your first task](guides/creating-your-first-task.md)
-* [Advanced permissions](guides/advanced-permissions.md)
-
-## Fundamentals
-
-* [Projects](fundamentals/projects.md)
-* [Members](fundamentals/members.md)
-* [Task Lists](fundamentals/task-lists.md)
-* [Tasks](fundamentals/tasks.md)
-
-## Use Cases
-
-* [For Designers](use-cases/for-designers/README.md)
-  * [Figma Integration](use-cases/for-designers/figma-integration.md)
-* [For Engineers](use-cases/for-engineers/README.md)
-  * [GitHub Integration](use-cases/for-engineers/github-integration.md)
-* [For Support](use-cases/for-support/README.md)
-  * [Intercom Integration](use-cases/for-support/intercom-integration.md)
-
-## Extras
-
-* [Keyboard Shortcuts](extras/keyboard-shortcuts.md)
+* [浏览器HTTP缓存](mu-lu/liu-lan-qi-http-huan-cun.md)
+* [流程](mu-lu/liu-cheng.md)
+* [强制缓存](mu-lu/qiang-zhi-huan-cun.md)
+* [Expires](mu-lu/expires.md)
+* [Cache-Control](mu-lu/cache-control.md)
+* [协商缓存](mu-lu/xie-shang-huan-cun.md)
+* [Last-Modifed](mu-lu/last-modifed.md)
+* [ETag](mu-lu/etag.md)
+* [对比强缓存和协商缓存](mu-lu/dui-bi-qiang-huan-cun-he-xie-shang-huan-cun.md)
+* [缓存决策](mu-lu/huan-cun-jue-ce.md)
+* [缓存决策树](mu-lu/huan-cun-jue-ce-shu.md)

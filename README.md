@@ -1,4 +1,4 @@
-# 强制缓存和协商缓存
+# 浏览器HTTP缓存
 
 ### 场景
 
@@ -46,7 +46,7 @@ http缓存都是从第二次请求开始的。
 
 对于强制缓存而言，如果浏览器判断所请求的目标资源有效命中，则可直接从强制缓存中返回请求响应，无须与服务器进行任何通信。
 
-![](<.gitbook/assets/image (1).png>)
+![](<.gitbook/assets/image (1) (1).png>)
 
 浏览器在第一次向服务器发送请求时，若服务器觉得该资源需要缓存，这是服务器就会在响应头response-header里面添加一个cache-control，如设置max-age，这样浏览器就会在本地缓存中存下相相应的文件。
 
@@ -60,7 +60,7 @@ http缓存都是从第二次请求开始的。
 
 在介绍强制缓存命中判断之前，我们首先来看一段响应头的部分信息
 
-![](<.gitbook/assets/image (12).png>)
+![](<.gitbook/assets/image (12) (1).png>)
 
 其中与强制缓存相关的两个字段是 **expires** 和 **cache-control**，让我们先了解一下expires
 
@@ -86,7 +86,7 @@ http缓存都是从第二次请求开始的。
 
 除此之外， cache-control 还可配置一些其他属性值来更准确地控制缓存，下面来具体介绍。
 
-![](<.gitbook/assets/image (16).png>)
+![](<.gitbook/assets/image (16) (1).png>)
 
 这种方式页面的加载速度是最快的，性能也是很好的，但是在这期间，如果服务器端的资源修改了，页面上是拿不到的，因为它不会再向服务器发请求了。这种情况就是我们在开发种经常遇到的，比如你修改了页面上的某个样式，在页面上刷新了但没有生效，因为走的是强缓存，所以Ctrl+F5之后就好了。&#x20;
 
@@ -94,7 +94,7 @@ http缓存都是从第二次请求开始的。
 
 cache-control的几个属性
 
-![](<.gitbook/assets/image (8).png>)
+![](<.gitbook/assets/image (8) (1).png>)
 
 ###
 
@@ -158,7 +158,7 @@ cache-control能作为 expires的完全替代方案，并且拥有其所不具�
 
 浏览器第一次请求的时候，若服务器使用了协商缓存学的策略，则它会返回资源和资源标识，并且浏览器将返回的资源存储到本地缓存。
 
-![](<.gitbook/assets/image (9).png>)
+![](<.gitbook/assets/image (9) (1).png>)
 
 当浏览器再次请求该资源时，浏览器向服务器发送请求和资源标识，服务器这时就会去判断当前请求的资源浏览器本次缓存的版本跟服务器里面资源最新的版本是否一致:
 
@@ -178,11 +178,11 @@ If-Modified Since能检查到的精度是秒级的，某些服务器不能精确
 
 ### last-modifed
 
-![](<.gitbook/assets/image (14).png>)
+![](<.gitbook/assets/image (14) (1).png>)
 
 在浏览器第一次请求时，服务器返回资源和资源标识符Last-Modified(在响应头中)
 
-![](<.gitbook/assets/image (17).png>)
+![](<.gitbook/assets/image (17) (1).png>)
 
 在后续请求中，浏览器就会在请求头带上资源标识If- Modified-Since发起请求，If-Modified-Since的值就是上一次请求时返回的Last-Modified的值，这时在服务器就会去对比IfModified-Since和Last-Modified的值判断是否是最新资源。
 
@@ -204,7 +204,7 @@ If-Modified Since能检查到的精度是秒级的，某些服务器不能精确
 
 ![](<.gitbook/assets/image (11).png>)
 
-![](<.gitbook/assets/image (5).png>)
+![](<.gitbook/assets/image (5) (1).png>)
 
 为了弥补通过时间戳判断的不足，从HTTP 1.1规范开始新增了一个ETag的头信息，即实体标签(EntityTag)。
 
@@ -240,7 +240,7 @@ If-Modified Since能检查到的精度是秒级的，某些服务器不能精确
 
 &#x20;在面对一个具体的缓存需求日 时，到底该如何制定缓存策略呢? 我们可以参照图所示的决策树 来逐步确定对一个资源具体白的缓存策略。
 
-![](<.gitbook/assets/image (6).png>)
+![](<.gitbook/assets/image (6) (1).png>)
 
 如果希望使用缓存，那么接下来就需要确定对缓存有效性的判断是否要与服务器进行协商，若需要与服务器协商则可为cache-control字段增加no-cache属性值，来强制启用协商缓存。
 
