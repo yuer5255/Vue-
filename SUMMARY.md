@@ -12,4 +12,3 @@
 * [ETag](mu-lu/etag.md)
 * [对比强缓存和协商缓存](mu-lu/dui-bi-qiang-huan-cun-he-xie-shang-huan-cun.md)
 * [缓存决策](mu-lu/huan-cun-jue-ce.md)
-* [缓存决策树](mu-lu/huan-cun-jue-ce-shu.md)
