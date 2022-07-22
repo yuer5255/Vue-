@@ -4,7 +4,7 @@
 
 * [浏览器HTTP缓存](README.md)
 * [流程](mu-lu/liu-cheng.md)
-* [对比强缓存和协商缓存](mu-lu/dui-bi-qiang-huan-cun-he-xie-shang-huan-cun.md)
+* [对比强制缓存和协商缓存](mu-lu/dui-bi-qiang-zhi-huan-cun-he-xie-shang-huan-cun.md)
 * [强制缓存](mu-lu/qiang-zhi-huan-cun.md)
 * [Expires](mu-lu/expires.md)
 * [Cache-Control](mu-lu/cache-control.md)

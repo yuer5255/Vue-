@@ -1,3 +1,7 @@
+---
+description: 资源最后修改时间
+---
+
 # Last-Modifed
 
 ![](<../.gitbook/assets/image (14) (1).png>)

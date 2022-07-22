@@ -1,7 +1,7 @@
 # Cache-Control
 
 {% hint style="info" %}
-为了解决 **Expires**判断的局限性，从HTTP 1.1协议开始新增了**Cache-Control**字段来对 Expires的功能进行扩展和完善。
+为了解决 **Expires**判断的局限性，从**HTTP 1.1**协议开始新增了**Cache-Control**字段来对 **Expires**的功能进行扩展和完善。
 {% endhint %}
 
 ![](<../.gitbook/assets/image (9).png>)
@@ -31,7 +31,11 @@ Router.get('/test2', async (ctx) => {
 
 从上述代码中可见`Cache-Control`设置了 `maxage=10`的属性值来控制响应资源的有效期，它是一个以秒为单位的时间长度，**表示该资源在被请求到后的10秒内有效**，如此便可避免服务器端和客户端时间戳不同步而造成的问题。
 
-from memory cache 代表使用内存中的缓存，from disk cache 则代表使用的是硬盘中的的缓存，浏览器读取缓存的顺序为memory->disk。
+{% hint style="success" %}
+from memory cache 代表使用内存中的缓存，from disk cache 则代表使用的是硬盘中的的缓存
+
+浏览器读取缓存的顺序为memory->disk。
+{% endhint %}
 
 
 
@@ -43,11 +47,9 @@ from memory cache 代表使用内存中的缓存，from disk cache 则代表使�
 
 ### no-cache和no-store
 
-设置`no-cache`并非像字面上的意思不使用缓存，其表示为强制进行协商缓存(后面会说)，即对于每次发起的请求都不会再去判断强制缓存是否过期，而是直接与服务器协商来验证缓存的有效性，若缓存未过期，则会使用本地缓存。
-
-设置`no-store`则表示禁止使用任何缓存策略，客户端的每次请求都需要服务器端给予全新的响应。
-
-`no-cache`和`no-store`是两个互斥的属性值，不能同时设置。
+* 设置`no-cache`并非像字面上的意思不使用缓存，其表示为**强制进行协商缓存(**后面会说)，即对于每次发起的请求都不会再去判断强制缓存是否过期，而是直接与服务器协商来验证缓存的有效性，若缓存未过期，则会使用本地缓存。
+* 设置`no-store`则表示**禁止使用任何缓存策略，**客户端的每次请求都需要服务器端给予全新的响应。
+* `no-cache`和`no-store`是两个互斥的属性值，不能同时设置。
 
 
 
